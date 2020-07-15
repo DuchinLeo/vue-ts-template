@@ -2,7 +2,7 @@
  * @Description:
  * @Author: Duchin/梁达钦
  * @Date: 2020-07-14 12:12:01
- * @LastEditTime: 2020-07-14 12:18:43
+ * @LastEditTime: 2020-07-15 12:08:29
  * @LastEditors: Duchin/梁达钦
  */
 import Cookies from 'js-cookie'
@@ -14,7 +14,7 @@ export const getLanguage = () => Cookies.get(languageKey)
 const tokenKey = 'token'
 
 // 获取cookie
-export const getCookie = (cookieName: string) => {
+export const getCookie = (cookieName?: string) => {
   if (cookieName) {
     return Cookies.get(cookieName)
   } else {
@@ -23,7 +23,7 @@ export const getCookie = (cookieName: string) => {
 }
 
 // 设置cookie
-export const setCookie = (cookieName: string, cookieVal: string) => {
+export const setCookie = (cookieVal: string, cookieName?: string) => {
   if (cookieName) {
     return Cookies.set(cookieName, cookieVal)
   } else {
@@ -32,7 +32,7 @@ export const setCookie = (cookieName: string, cookieVal: string) => {
 }
 
 // 移除cookie
-export const removeCookie = (cookieName: string) => {
+export const removeCookie = (cookieName?: string) => {
   if (cookieName) {
     return Cookies.remove(cookieName)
   } else {

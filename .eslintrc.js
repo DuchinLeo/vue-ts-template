@@ -2,7 +2,7 @@
  * @Description: eslint配置
  * @Author: Duchin/梁达钦
  * @Date: 2020-07-14 11:58:11
- * @LastEditTime: 2020-07-14 17:39:38
+ * @LastEditTime: 2020-07-15 18:23:23
  * @LastEditors: Duchin/梁达钦
  */
 module.exports = {
@@ -23,6 +23,8 @@ module.exports = {
     }
   },
   rules: {
+    // 接口分号
+    '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
